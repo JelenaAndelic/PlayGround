@@ -150,6 +150,7 @@ function creatRow(clientRegistration) {
 function filterFunction() {
 
 
+    //Old way of implementation filter function
 
     // if (document.getElementById("selectFilter").value == "Chrome") {
     // You have to hide the object which is added by Firefox
