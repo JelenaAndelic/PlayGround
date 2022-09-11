@@ -149,60 +149,6 @@ function creatRow(clientRegistration) {
 
 function filterFunction() {
 
-
-    //Old way of implementation filter function
-
-    // if (document.getElementById("selectFilter").value == "Chrome") {
-    // You have to hide the object which is added by Firefox
-
-    //     let table, rows, switching, i, x, y, shouldSwitch;
-    //     table = document.getElementById("tableClient");
-
-    //     do {
-    //         switching = false;
-    //         rows = table.rows;
-    //         //Loop through all table rows
-    //         for (i = 0; i < (rows.length - 2); i++) {
-    //             shouldSwitch = false;
-    //             x = rows[i].getElementsByTagName("td")[4];
-    //             y = rows[i + 1].getElementsByTagName("td")[4];
-    //             if (Number(x.innerHTML) < Number(y.innerHTML)) {
-    //                 shouldSwitch = true;
-    //                 break;
-    //             }
-    //         }
-    //         if (shouldSwitch) {
-    //             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-    //             switching = true;
-    //         }
-    //     } while (switching == true)
-
-    // } else if (document.getElementById("selectFilter").value == "Firefox") {
-    //     let table, rows, switching, i, x, y, shouldSwitch;
-    //     table = document.getElementById("tableClient");
-
-    //     do {
-    //         switching = false;
-    //         rows = table.rows;
-    //         //Loop through all table rows
-    //         for (i = 0; i < (rows.length - 2); i++) {
-    //             shouldSwitch = false;
-    //             //Get the two elements you want to compare, one from current row and one from the next
-    //             x = rows[i].getElementsByTagName("td")[4];
-    //             y = rows[i + 1].getElementsByTagName("td")[4];
-    //             //Check if the two rows should switch place
-    //             if (Number(x.innerHTML) > Number(y.innerHTML)) {
-    //                 shouldSwitch = true;
-    //                 break;
-    //             }
-    //         }
-    //         if (shouldSwitch) {
-    //             //If a switch has been marked, make the switch and mark that a switch has been done
-    //             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-    //             switching = true;
-    //         }
-    //     } while (switching == true)
-
     let selectedBrowser = document.querySelector("#selectFilter").value;
 
     if (selectedBrowser == "Firefox") {
