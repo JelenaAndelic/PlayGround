@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Form</title>
+    <link rel="stylesheet" href="form.css" type="text/css" />
+</head>
+
+<body>
+    <div class="myDiv">
+        <table>
+            <form name="clientRegistration" id="clientRegistration">
+                <tr class="row">
+                    <th class="col-25">
+                        <label for="fname">First name:</label>
+                    </th>
+                    <td class="col-75">
+                        <input type="text" id="fname" name="fname">
+                    </td>
+                </tr>
+                <tr class="row">
+                    <th class="col-25">
+                        <label for="lname">Last name:</label>
+                    </th>
+                    <td class="col-75">
+                        <input type="text" id="lname" name="lname">
+                    </td>
+                </tr>
+                <tr class="row">
+                    <th class="col-25">
+                        <label for="email">Email:</label>
+                    </th>
+                    <td class="col-75">
+                        <input type="email" id="email" name="email">
+                    </td>
+                </tr>
+                <tr class="row">
+                    <th class="col-25">
+                        <label for="city">City:</label>
+                    </th>
+                    <td class="col-75">
+                        <select name="city" id="city">
+                            <option value="" selected>[Selected one]</option>
+                            <option value="Ada">Ada</option>
+                            <option value="Aleksandrovac">Aleksandrovac</option>
+                            <option value="Aleksinac">Aleksinac</option>
+                            <option value="Apatin">Apatin</option>
+                            <option value="Arandjelovac">Arandjelovac</option>
+                            <option value="Arilje">Arilje</option>
+                            <option value="Backa Palanka">Backa Palanka</option>
+                            <option value="Backa Topola">Backa Topola</option>
+                            <option value="Bajina Basta">Bajina Basta</option>
+                            <option value="Becej">Becej</option>
+                            <option value="Beocin">Beocin</option>
+                            <option value="Beograd">Beograd</option>
+                            <option value="Crkvine">Crkvine</option>
+                            <option value="Crna Trava">Crna Trava</option>
+                            <option value="Cacak">Cacak</option>
+                            <option value="Celarevo">Celarevo</option>
+                            <option value="Cuprija">Cuprija</option>
+                            <option value="Despotovo">Despotovo</option>
+                            <option value="Dimitrovgrad">Dimitrovgrad</option>
+                            <option value="Erdevik">Erdevik</option>
+                            <option value="Gajdobra">Gajdobra</option>
+                            <option value="Horgos">Horgos</option>
+                            <option value="Irig">Irig</option>
+                            <option value="Jagodina">Jagodina</option>
+                            <option value="Kanjiza">Kanjiza</option>
+                            <option value="Leskovac">Leskovac</option>
+                            <option value="Ljubovija">Ljubovija</option>
+                            <option value="Mladenovac">Mladenovac</option>
+                            <option value="Nis">Nis</option>
+                            <option value="Novi Sad">Novi Sad</option>
+                            <option value="Paracin">Paracin</option>
+                            <option value="Priboj">Priboj</option>
+                            <option value="Raska">Raska</option>
+                            <option value="Ruma">Ruma</option>
+                            <option value="Sjenica">Sjenica</option>
+                            <option value="Sremska Mitrovica">Sremska Mitrovica</option>
+                            <option value="Sid">Sid</option>
+                            <option value="Topola">Topola</option>
+                            <option value="Uzice">Uzice</option>
+                            <option value="Valjevo">Valjevo</option>
+                            <option value="Vranje">Vranje</option>
+                            <option value="Zrenjanin">Zrenjanin</option>
+                            <option value="Zabalj">Zabalj</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="row">
+                    <th class="col-25">
+                        <label for="credit">Credit:</label>
+                    </th>
+                    <td class="col-75">
+                        <input type="number" id="credit" name="credit">
+                    </td>
+                </tr>
+                <tr class="row">
+                    <th class="col-25" colspan="2">
+                        <button class="col-18" style="width: 18%;" onclick="add(event)">Add</button>
+                        <button class="col-40" style="width: 40%;" onclick="saveChanges(event)">Save changes</button>
+                        <button class="col-24" style="width: 24%;" onclick="deleteClient(event)">Delete</button>
+                        <button class="col-18" style="width: 18%;" onclick="exitInput(event)">Exit</button>
+                    </th>
+                </tr>
+            </form>
+        </table>
+
+        <p style="font-size: 20px; font-weight: bold">Currently registrated users:</p>
+        <p id="demo"></p>
+
+        <div id="divTable">
+            <table class="secondTable" id="tableClient">
+                <tr id="rowFilter">
+                    <td colspan="7">
+                        <div id="selectFilterDiv" style="width: 95%; margin:auto">
+                            <p style="margin: 0; text-align:center">Filter by:</p>
+                            <select id="selectFilter" name="filterOption">
+                                <option value="" selected>Show all Clients</option>
+                                <option value="Firefox">Firefox</option>
+                                <option value="Chrome">Chrome</option>
+                            </select>
+                        </div>
+                        <div style="display: flex; justify-content:center">
+                            <button onclick="filterFunction()">Filter</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="form.js"></script>
+
+</body>
+
+</html>

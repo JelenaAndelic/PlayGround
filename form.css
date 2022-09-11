@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e6ffe6;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    margin: 1em;
+}
+
+th {
+    color: #090;
+    text-align: left;
+    width: auto;
+}
+
+.myDiv {
+    border: 3px solid green;
+    background-color: #e6ffe6;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+select {
+    width: 100%;
+}
+
+
+button {
+    display: block;
+    float: left;
+}
+
+p {
+    color: #090;
+    margin: 1em;
+}
+
+#divTable {
+    display: none;
+}
+
+
+/* for Firexof */
+@-moz-document url-prefix() {
+
+    body {
+        background-color: #ffebcc;
+    }
+
+    th {
+        color: #f90;
+        text-align: left;
+        width: auto;
+    }
+
+    .myDiv {
+        border: 3px solid #f90;
+        background-color: #ffebcc;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p {
+        color: #f90;
+        margin: 1em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    table,
+    tbody,
+    tr,
+    th,
+    td {
+        display: block;
+    }
+
+
+
+    .myDiv {
+        width: 100%;
+        margin-top: 0;
+        border: none;
+    }
+
+
+    .col-25,
+    .col-75 {
+        border: none;
+    }
+
+    button {
+        display: block;
+        width: 100% !important;
+        float: none;
+    }
+
+
+    input[type=text],
+    input[type=number],
+    input[type=email],
+    select {
+        width: 100%;
+    }
+
+    /* #tableClient,
+    tr {
+        margin-top: 0 !important;
+    } */
+
+    table.secondTable tr td {
+        margin: 0;
+        border: #f0f0f0 1px inset;
+    }
+
+    #selectFilterDiv {
+        width: 100% !important;
+    }
+
+}
